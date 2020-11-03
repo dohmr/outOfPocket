@@ -4,6 +4,8 @@ const FILES_TO_CACHE = [
 
   "/manifest.webmanifest",
   "/favicon.ico",
+  "/public/icons/icon-192x192.png",
+  "/public/icons/icon-512x512.png"
 
 ];
 
@@ -42,7 +44,7 @@ self.addEventListener("activate", function (evt) {
 // fetch
 self.addEventListener("fetch", function (evt) {
   // cache successful requests to the API
-  if (evt.request.url.includes("/find/") || (evt.request.url.includes("/all")) {
+  if (evt.request.url.includes("/api/")) {
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
         return fetch(evt.request)
