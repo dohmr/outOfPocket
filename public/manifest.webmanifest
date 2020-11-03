@@ -1,0 +1,9 @@
+{
+  "name": "Out of Pocket, Budget Tracker",
+  "short_name": "Budget App",
+  
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone"
+}
